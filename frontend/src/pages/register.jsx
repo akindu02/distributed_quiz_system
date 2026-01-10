@@ -35,16 +35,30 @@ export default function Register() {
         }
       );
 
+      // save user (keep token logic as-is, since you said not to change code)
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
 
-      navigate('/dashboard');
+      // ✅ ROLE BASED REDIRECT
+      const userRole = res.data.user.role;
+
+      if (userRole === 'student') {
+        navigate('/student');
+      } else if (userRole === 'teacher') {
+        navigate('/teacher');
+      } else if (userRole === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+
     } catch (err) {
       alert(err.response?.data?.error || 'Registration failed');
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="min-h-screen flex">

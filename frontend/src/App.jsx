@@ -6,6 +6,9 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './pages/login'
 import Register from './pages/register'
 import Home from './pages/home'
+import Student from './pages/student'
+import Teacher from './pages/teacher'
+import Admin from './pages/admin'
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/student' element={<Student/>}/>
+        <Route path='/teacher' element={<Teacher/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Routes>
     </>
   )

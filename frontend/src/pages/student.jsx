@@ -1,6 +1,6 @@
 import React from 'react'
 
-const student = () => {
+const Student = () => {
   return (
     <div>
       <h1>student</h1>
@@ -8,4 +8,4 @@ const student = () => {
   )
 }
 
-export default student
+export default Student
