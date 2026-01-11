@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleAction = () => {
+  const handleLogin = () => {
     navigate('/login');
+  };
+
+  const handleGetStarted = () => {
+    navigate('/register');
   };
 
   return (
@@ -21,8 +25,8 @@ const Home = () => {
           <span className="text-2xl font-bold text-slate-800">QuizHub</span>
         </div>
         <div className="flex gap-4 items-center">
-          <button onClick={handleAction} className="text-slate-600 font-medium hover:text-cyan-600">Login</button>
-          <button onClick={handleAction} className="bg-cyan-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-cyan-600 transition">
+          <button onClick={handleLogin} className="text-slate-600 font-medium hover:text-cyan-600">Login</button>
+          <button onClick={handleGetStarted} className="bg-cyan-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-cyan-600 transition">
             Get Started
           </button>
         </div>
@@ -41,13 +45,13 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={handleAction}
+              onClick={handleGetStarted}
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-cyan-600 transition flex items-center justify-center gap-2"
             >
               Get Started <span>→</span>
             </button>
             <button 
-              onClick={handleAction}
+              onClick={handleLogin}
               className="bg-slate-200 text-slate-800 px-8 py-3 rounded-lg font-bold text-lg hover:bg-white transition"
             >
               Login to Portal
