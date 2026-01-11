@@ -31,9 +31,6 @@ const Home = () => {
       {/* Hero Section */}
       <header className="bg-gradient-to-br from-slate-800 via-slate-700 to-cyan-900  text-white py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-slate-800 border border-slate-700 rounded-full px-4 py-1 mb-6 text-sm text-cyan-400">
-            Distributed Systems Project — University of Kelaniya
-          </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
             Distributed Online <br />
             <span className="text-cyan-400">Quiz System</span>
